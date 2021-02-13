@@ -6,6 +6,7 @@
 
 body {
   font-family: sans-serif;
+  background-color: #E5E5E5;
 }
 
 .container {
@@ -35,6 +36,7 @@ li {
   justify-content: space-between;
   flex-direction: column;
   height: 100vh;
+  position: relative;
 }
 
 .header__menu-left {
@@ -51,7 +53,13 @@ li {
 }
 
 .header__down-brands {
+  position: absolute;
+  max-width: 1110px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 30px 0;
+  width: 100%;
 }
 
 .header__down-brands {
@@ -106,7 +114,6 @@ li {
   color: #ffff;
   border: 1px solid #fff;
   padding: 15px 35px;
-  margin-bottom: 80px;
   font-weight: 500;
   font-size: 18px;
   text-align: center;
@@ -114,6 +121,8 @@ li {
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color .2s linear;
+  margin-bottom: 160px;
+  position: relative;
 }
 
 .header__down-btn:hover {
@@ -125,5 +134,222 @@ li {
 .header__down-title {
   color: #fff;
   margin-bottom: 50px;
+}
+
+.down_brands::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 125px;
+  z-index: 1;
+  background-color: #FFFFFF;
+}
+
+.img__text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.content__title {
+  margin: 100px 0 60px 0;
+  color: #333333;
+}
+
+.content__title-text {
+  padding-bottom: 15px;
+}
+
+.btn-items {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 55px;
+}
+
+.btn-back {
+  width: 165px;
+  height: 55px;
+  border: 1px solid #333333;
+  background-color: #E5E5E5;
+  position: relative;
+}
+
+.btn-back .btn-inner {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  transition: background-color .2s linear;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #333333;
+  background-color: #E5E5E5;
+  top: -6px;
+  left: -6px;
+}
+
+.btn-back .btn-inner.active {
+  background-color: #333333;
+  color: #FFFFFF;
+  top: 0;
+  left: 0;
+}
+
+.btn-back .btn-inner:hover {
+  top: 0;
+  left: 0;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.img__menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.img__menu.advice {
+  margin-bottom: 120px;
+}
+
+.img__menu-img {
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.img__menu-img.advice {
+  margin-bottom: 60px;
+}
+
+.img__picture {
+  height: auto;
+  width: 100%;
+}
+
+.img__text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.img__text.advice {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 29.4px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.about {
+  background: url("../IMG/cho1.jpg");
+}
+
+.about__title {
+  padding: 100px 0 45px 0;
+  font-size: 15px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.about__text {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+  width: 730px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.about__btn {
+  margin: 0 auto;
+  padding: 15px 35px;
+  background: #FFFFFF;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  margin: 60px 0 60px 0;
+  transition: background-color .2s linear;
+}
+
+.about__btn:hover {
+  background: #333333;
+  color: #FFFFFF;
+}
+
+.about__btn-inner {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.advice__btn {
+  margin: 0 auto;
+  padding: 15px 35px;
+  background: #333333;
+  border: 1px solid #333333;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  transition: background-color .2s linear;
+  display: flex;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.advice__btn:hover {
+  background: #FFFFFF;
+  color: #333333;
+}
+
+.advice__btn-inner {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.img__advice {
+  display: flex;
+}
+
+.img__advice-png {
+  position: relative;
+  display: flex;
+}
+
+.img__advice-png svg {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.img__advice-img img {
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
